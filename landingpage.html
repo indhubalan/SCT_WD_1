@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <style>
+        body {
+            background-color: rgba(176, 196, 222, 0.856);
+            
+        }
+         .navbar {
+            position: fixed;
+            width: 1299px;
+            top: 0;
+            left: 1px;
+            background-color: rgba(119, 136, 153, 0.877);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            transition: background 0.3s;
+        }
+        .navbar.scrolled {
+           background-color: grey;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: pink;
+        }
+        .content {
+             text-align: center;
+             margin-top: 50px;
+            padding: 20px;
+            height: 2000px;
+            font-size: x-large;
+             
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div>Logo</div>
+        <div>
+            <a href="./home.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./service.html">Services</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+    </div>
+     <div class="content"> 
+        <h1>Welcome to Our Landing Page</h1>
+        <p>Scroll down to see the navigation bar change.</p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            let navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
